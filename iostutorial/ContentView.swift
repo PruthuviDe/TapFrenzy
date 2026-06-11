@@ -101,7 +101,7 @@ struct ContentView: View {
                     Text("TAP!")
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(.white)
-                        .frame(width: 200, height: 200)
+                        .frame(width: 250, height: 250)
                         .background(
                             buttonType == 1 ? Color.green :
                             buttonType == 2 ? Color.gray :
