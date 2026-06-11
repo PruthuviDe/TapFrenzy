@@ -44,6 +44,10 @@ struct ContentView: View {
                 .clipShape(Capsule())
             }
             .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(Color.purple.opacity(0.20))
+            .ignoresSafeArea()
+
 
         } else {
 
@@ -60,7 +64,7 @@ struct ContentView: View {
                     Text("×\(comboMultiplier) COMBO!")
                         .font(.title2)
                         .fontWeight(.bold)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.red)
                 }
 
                 Text("Time: \(timeRemaining)")
@@ -111,6 +115,9 @@ struct ContentView: View {
                 }
             }
             .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(Color.purple.opacity(0.20))
+            .ignoresSafeArea()
 
             .onReceive(timer) { _ in
 
@@ -134,7 +141,7 @@ struct ContentView: View {
 
     func handleTap() {
 
-        // First tap starts the game
+     
         if !gameStarted {
             gameStarted = true
         }
