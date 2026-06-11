@@ -11,17 +11,18 @@ struct ContentView: View {
     @State private var lastTapTime = Date()
     @State private var buttonType = 0
 
+
     // Countdown timer
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     // Changes button colour
     let colourTimer = Timer.publish(every: 2.5, on: .main, in: .common).autoconnect()
 
-  
+
 
     var body: some View {
 
-        
+
         if timeRemaining == 0 {
 
             VStack(spacing: 20) {
@@ -50,7 +51,7 @@ struct ContentView: View {
 
         } else {
 
-    
+
             VStack(spacing: 30) {
 
                 Text("Tap Frenzy")
@@ -70,6 +71,10 @@ struct ContentView: View {
                 Text("Time: \(timeRemaining)")
                     .font(.title2)
                     .foregroundColor(.orange)
+
+                ProgressView(value: Double(timeRemaining), total: 10)
+                    .tint(.orange)
+                    .padding(.horizontal)
 
                 // Colour hint
                 if buttonType == 0 {
@@ -148,3 +153,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
