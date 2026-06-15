@@ -102,7 +102,7 @@ struct ContentView: View {
                     handleTap()
                 }) {
 
-                    Text("TAP!")
+                    Text("TAP!!")
                         .font(.system(size: 40, weight: .bold))
                         .foregroundColor(.white)
                         .frame(width: 250, height: 250)
@@ -181,6 +181,7 @@ struct ContentView: View {
         lastTapTime = Date()
         buttonType = 0
         gameStarted = false
+        
     }
 }
 
